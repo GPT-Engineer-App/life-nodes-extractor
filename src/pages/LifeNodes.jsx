@@ -33,9 +33,7 @@ const mockProcessDocument = async (file) => {
 };
 
 const LifeNodes = () => {
-  console.log("LifeNodes component is being rendered");
   const [file, setFile] = useState(null);
-  console.log("Initial file state:", file);
   const { mutate, data, isLoading, isError } = useMutation(mockProcessDocument, {
     onSuccess: () => {
       toast("Document processed successfully");
@@ -48,23 +46,15 @@ const LifeNodes = () => {
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     setFile(selectedFile);
-    console.log("File selected:", selectedFile);
   };
 
   const handleUpload = () => {
     if (file) {
-      console.log("Uploading file:", file);
       mutate(file);
     } else {
       toast.error("Please select a file to upload");
     }
-    console.log("Upload button clicked");
   };
-
-  console.log("Current file state:", file);
-  console.log("Current mutation data:", data);
-  console.log("Loading state:", isLoading);
-  console.log("Error state:", isError);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
