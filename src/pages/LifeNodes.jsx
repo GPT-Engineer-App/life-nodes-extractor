@@ -24,7 +24,6 @@ const mockProcessDocument = async (file) => {
             spouse: "Jane Smith",
             children: ["Emily Doe"],
           },
-          // Add more mock data as needed
         });
       } else {
         reject("Failed to process document");
@@ -100,7 +99,6 @@ const LifeNodes = () => {
               ))}
             </ul>
           </div>
-          {/* Add more sections as needed */}
         </div>
       )}
     </div>
