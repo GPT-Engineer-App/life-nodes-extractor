@@ -5,7 +5,7 @@ import { Home } from "lucide-react";
 import LifeNodes from "./pages/LifeNodes.jsx";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/default"; // available: default, navbar, sidebar
-import Home from "./pages/Home.jsx";
+import HomePage from "./pages/Home.jsx";
 import Upload from "./pages/Upload.jsx";
 const queryClient = new QueryClient();
 
@@ -35,7 +35,7 @@ const App = () => {
         <Router>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
+              <Route index element={<HomePage />} />
               <Route path="life-nodes" element={<LifeNodes />} />
               <Route path="upload" element={<Upload />} />
             </Route>
