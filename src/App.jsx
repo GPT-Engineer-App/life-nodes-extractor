@@ -5,7 +5,8 @@ import { Home } from "lucide-react";
 import LifeNodes from "./pages/LifeNodes.jsx";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/default"; // available: default, navbar, sidebar
-import Index from "./pages/Index.jsx";
+import Home from "./pages/Home.jsx";
+import Upload from "./pages/Upload.jsx";
 const queryClient = new QueryClient();
 
 export const navItems = [
@@ -20,8 +21,8 @@ export const navItems = [
     icon: <Home className="h-4 w-4" />, // Replace with appropriate icon
   },
   {
-    title: "Home", // Feel free to change this to your liking
-    to: "/",
+    title: "Upload", // Feel free to change this to your liking
+    to: "/upload",
     icon: <Home className="h-4 w-4" />,
   },
 ];
@@ -34,8 +35,9 @@ const App = () => {
         <Router>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Index />} />
+              <Route index element={<Home />} />
               <Route path="life-nodes" element={<LifeNodes />} />
+              <Route path="upload" element={<Upload />} />
             </Route>
           </Routes>
         </Router>
