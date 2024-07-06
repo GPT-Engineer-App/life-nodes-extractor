@@ -46,15 +46,20 @@ const LifeNodes = () => {
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
+    console.log("File selected:", e.target.files[0]);
   };
 
   const handleUpload = () => {
     if (file) {
+      console.log("Uploading file:", file);
       mutate(file);
     } else {
       toast.error("Please select a file to upload");
     }
   };
+
+  console.log("File state:", file);
+  console.log("Mutation data:", data);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
