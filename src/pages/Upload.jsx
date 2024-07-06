@@ -1,9 +1,9 @@
-import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
+import React, { useState } from "react";
 
 const mockProcessDocument = async (file) => {
   return new Promise((resolve, reject) => {
@@ -57,12 +57,12 @@ const Upload = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle>Upload Document</CardTitle>
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-900 text-white">
+      <Card className="w-full max-w-md bg-gray-800">
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl">Upload Document</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="text-center">
           <Input type="file" onChange={handleFileChange} className="mb-4" />
           <Button onClick={handleUpload} disabled={isLoading}>
             {isLoading ? "Processing..." : "Upload"}
