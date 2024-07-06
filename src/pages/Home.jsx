@@ -12,10 +12,10 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-900 text-white">
       <Card className="w-full max-w-2xl bg-gray-800">
-        <CardHeader>
+        <CardHeader className="text-center">
           <CardTitle className="text-4xl">Life Nodes</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="text-center">
           <p className="mb-4">
             Welcome to Life Nodes, a tool designed to help you organize and
             manage important life documents. Upload your documents and let our
