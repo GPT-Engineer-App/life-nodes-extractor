@@ -33,6 +33,7 @@ const mockProcessDocument = async (file) => {
 };
 
 const LifeNodes = () => {
+      console.log("LifeNodes component is being rendered");
   const [file, setFile] = useState(null);
   const { mutate, data, isLoading, isError } = useMutation(mockProcessDocument, {
     onSuccess: () => {
@@ -61,7 +62,7 @@ const LifeNodes = () => {
   console.log("Mutation data:", data);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>Upload Document</CardTitle>
